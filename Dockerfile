@@ -7,9 +7,11 @@ ENV PYTHONUNBUFFERED 1
 # Set the current working directory
 WORKDIR /app
 
+# Create a virtual env forpip to run in
 RUN python -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 
+# Ensure python3 is available in PATH
 ENV PATH="/usr/bin/python3:$PATH"
 
 RUN mkdir -p /app/pip_cache
